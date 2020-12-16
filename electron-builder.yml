@@ -74,7 +74,8 @@ mac:
   darkModeSupport: true
   hardenedRuntime: true
   gatekeeperAssess: false
-  target: 
+  artifactName: ${productName}-${version}-mac.${ext}
+  target:
   - dmg
   - zip
 linux:
@@ -104,5 +105,7 @@ dmg:
     y: 170
     type: link
     path: /Applications
+  artifactName: ${productName}-${version}.${ext}
+  title: "${productName} ${version}"
 nsis:
   perMachine: true
